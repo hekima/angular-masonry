@@ -120,6 +120,9 @@
 
             scope.$emit('masonry.created', element);
             scope.$on('$destroy', ctrl.destroy);
+            scope.$on('masonry-layout', function(){
+              element.masonry(options);    
+            });
           }
         }
       };
